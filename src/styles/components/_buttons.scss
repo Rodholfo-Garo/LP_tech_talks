@@ -1,0 +1,29 @@
+@use '../variables';
+
+.button {
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    //Força o Texto a oculpar a linha inteira, sem ele quebrar
+    white-space: nowrap;
+
+    &--primary {
+        color: #fff;
+        background-color: variables.$purple;
+    }
+
+
+    //celular
+    @media (max-width: 640px) {
+        display: block;
+        width: 100%;
+    }
+
+    //tablet
+    @media (max-width: 1024px) {
+        display: flex;
+        align-items: center; //Centraliza na vertical
+    }
+}
